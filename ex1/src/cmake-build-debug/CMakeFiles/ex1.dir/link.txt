@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++   -Wall -Wextra -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/ex1.dir/osm.cpp.o CMakeFiles/ex1.dir/main.cpp.o CMakeFiles/ex1.dir/Users/itamar/Desktop/os/ex2/src/uthreads.cpp.o CMakeFiles/ex1.dir/Users/itamar/Desktop/os/ex2/src/Thread.cpp.o  -o ex1 

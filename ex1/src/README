@@ -1,0 +1,31 @@
+mattan, itamar108
+Mattan Yeroushalmi (312292584), Itamar Hadad (308426964)
+EX: 1
+
+FILES:
+osm.cpp - our source file for the comparison task.
+TimeAnalysis.png - a png file containing a diagram of our run-time comparison.
+Makefile - a Makefile.
+README - this file.
+
+REMARKS: The run time comparison code was implemented in cpp.
+
+
+
+ANSWERS:
+
+Assignment 1:
+The program receives 1 argument only. 
+
+if indeed one argument was given, "ARG_1", it first opens a directory under the name "Welcome", 
+with full permissions for user and organization. For users outside of the organization, read and execute permissions are given.
+Next, it opens inside that directory a second directory called "To", with the same permissions as described above.
+In that directory, it creates a new file "OS2020" with read and write permissions for all. In that same file it then writes the 
+string "<username>\nIf you haven't read the course guidelines yet --- do it right now!\n<ARG_1>". After that the program proceeds to
+delete the file and then the directories that it created in the beginning.
+
+Otherwise, if the wrong number of arguments has been given, the error code  "Error. The program should receive a single argument. 
+Exiting.\n: Success" is printed to STD_ERR.
+
+Assignment 2:
+We performed the run time measurements using an unrolling factor of 10 and 100 million repetitions for each of the given operation. The VM had much worse performance than the machine and container.

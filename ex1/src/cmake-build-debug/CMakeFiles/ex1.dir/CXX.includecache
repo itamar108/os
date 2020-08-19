@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/itamar/Desktop/os/ex2/src/Thread.cpp
+Thread.h
+/Users/itamar/Desktop/os/ex2/src/Thread.h
+
+/Users/itamar/Desktop/os/ex2/src/Thread.h
+uthreads.h
+/Users/itamar/Desktop/os/ex2/src/uthreads.h
+iostream
+-
+queue
+-
+setjmp.h
+-
+
+/Users/itamar/Desktop/os/ex2/src/uthreads.cpp
+uthreads.h
+/Users/itamar/Desktop/os/ex2/src/uthreads.h
+Thread.h
+/Users/itamar/Desktop/os/ex2/src/Thread.h
+
+/Users/itamar/Desktop/os/ex2/src/uthreads.h
+

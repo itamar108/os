@@ -1,0 +1,61 @@
+mattan, itamar108
+Mattan Yeroushalmi (312292584), Itamar Hadad (308426964)
+EX: 2
+
+FILES:
+uthreads.cpp - our source file for the comparison task.
+TimeAnalysis.png - a png file containing a diagram of our run-time comparison.
+Makefile - a Makefile.
+README - this file.
+
+REMARKS: The run time comparison code was implemented in cpp.
+
+
+
+ANSWERS:
+
+Assignment 1:
+Assume that one has to run an operation that could take a very long time to complete
+depending on its input - for instance sorting an array. Assume that we now have to
+sort many arrays of unknown sizes. If we sort all of them in a serial manner,
+then we might run into an array of great size, which will prevent us from receiving output
+for subsequent smaller arrays.
+However, by using a separate thread for each sorting, we will be sure to receive outputs for
+the smaller arrays promptly - and thus, they won't be stalled until the big array sorting finishes.
+
+Assignment 2:
+Advantages:
+    As seen in class, while processes do note share their data, open files and code, kernel level
+    threads do. Therefore, if each tab runs in a separate process, then that protects its memory from
+    being tampered with by other tabs. For instance in the case of a malicious program running in one
+    of the tabs, it will not be able to access the other ones. Another advantage of that compartmentalization
+    is that it ensures that the memory of one tab will not be overwritten by another. Conversely, in
+    kernel level threads, we do not have this assurance.
+Disadvantages:
+    Switching between processes has a high overhead,
+    (due to the PCB switching in the context switch operation as seen in class),
+    and therefore if google chrome maintains a process for each tab, this will result in expensive overhead time of
+    switching between those tabs. conversely, kernel level threads switching has
+    a smaller overhead (since the TCB blockes are smaller).
+
+Assignment 3:
+    After typing the kill command and pressing enter in the shell, a keyboard intterupt will be sent from the I/O device
+    (keyboard) to the CPU, moving the control to kernel mode and to the handler of the OS. The OS will then send a
+    SIGINT, and then the operating system will handles the termination of the process: it will send SIGTERM
+    (by default), and now the process itself would handle that signal (preferably by shutting down safely).
+    Alternatively, a SIGKILL signal can be sent (by explicitly using the corresponding flag), which can not be
+    ignored by the process.
+
+
+Assignment 4:
+    virtual time is the time in which the process is running in the cpu, and from the process' point of view it's
+    actually the only time that exists. Real time is in fact the regular time in real life
+    (the aggregate time of all processes running on the machine). An example for using real time can be the
+    scheduling between processes using machine timer, which keeps track of the real time and switches between processes
+    after X second. This timer would of course need to have a global view of the actual time that passed in reality,
+    and therefore real time would be appropriate in this case.
+    An example for using virtual time can be if we would like to measure the time the execution of a certain
+    mathematical opeation for instance took. in this case we would like to isolate only the process that is in charge
+    of that operation, which is the virtual time, as explained above.
+
+

@@ -1,0 +1,27 @@
+////
+//// Created by Itamar Hadad on 09/06/2020.
+
+
+int forEachDelete(RBTree *tree, forEachFunc func)
+{
+    if (tree && tree->root) {
+        cur = tree->root;
+        while (cur)
+        {
+            if (cur->left)
+            {
+                cur = cur->left;
+            }
+            else if (cur->right)
+            {
+                cur = cur->right;
+            } else {
+                freeNode(cur,tree);
+                cur = cur->parent;
+                tree->size--;
+            }
+        }
+        return 1;
+    }
+    return 0;
+}

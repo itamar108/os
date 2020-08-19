@@ -1,0 +1,3 @@
+/Users/itamar/Desktop/os/ex1/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/itamar/Desktop/os/ex1/src/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/itamar/Desktop/os/ex1/src/cmake-build-debug/CMakeFiles/ex1.dir

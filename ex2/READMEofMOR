@@ -1,0 +1,42 @@
+mormoshe, gil.zada
+Mor Moshe 206120537, Gil Haim-Zada 315441683
+EX: 2
+
+FILES:
+uthreads.cpp
+sleeping_threads_list.h
+sleeping_threads_list.cpp
+README
+Makefile
+
+
+REMARKS:
+
+
+ANSWERS:
+
+1. Example for general usage: suppose we have a program for calculating complex mathematical equalities.
+   and consider the following scenario: if we gave the program a very complex problem to solve, which will take a lot of
+   time, and then a simple calculation that can be solve in less than a second - we would have to wait until the complex
+   problem solution and only after we would get the answer for the simple problem.
+   using user level thread make a lot of sense here - if we give each calculation a thread,
+   the simple problem would have been solved faster because the threads work 'simultaneously'.
+2. Advantages:
+   each process has a different located RAM, so the processes don't share memory. on the other hand, threads share
+   the same memory space, so each tab would have smaller memory space.
+   each tab (process) is independent and protected from each other (require operation system to communicate), which is
+   more secured.
+   disadvantages:
+   30-100 times slower to create a new process than a thread. more time to terminate a process than a thread.
+   processes need to invoke the kernal to communicate, but thread don't have to - because they share memory.
+3. First, after pressing enter- a keyboard interrupt is received in the OS, (in kernel mode) which translated to SIGINT.
+   Now the OS handel the command accepted and send signal according to the command.
+   The default signal of kill command is SIGTERM - Termination signal.
+   When killing a process or series of processes, it is common sense to start trying with the least dangerous signal,
+   SIGTERM. That way, programs that care about an orderly shutdown get the chance to follow the procedures that they
+   have been designed to execute when getting the SIGTERM signal, such as cleaning up and closing open files.
+   If you send a SIGKILL to a process, you remove any chance for the process to do a tidy cleanup and shutdown,
+   which might have unfortunate consequences.
+4. Real time - the actual time that pass from point a to point b in seconds
+   Virtual time - the time a process is in running position (the running time of the process) - the time the process
+   run on the CPU.

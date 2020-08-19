@@ -1,0 +1,5 @@
+frameBaseAddr = 0
+addrArr = [,,,]
+depth = 0
+curFrame = 0
+child = 0

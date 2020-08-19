@@ -1,0 +1,35 @@
+mattan, itamar108
+Mattan Yeroushalmi (312292584), Itamar Hadad (308426964)
+EX: 3
+
+FILES:
+Barrier.cpp - Implementation of the barrier. 
+Barrier.h - Header for barrier.
+MapReduceFramework.cpp - Implementation for the Map Reduce Framework.
+fileWordCounter_comparison.png - A comparison Graph of the runtimes.
+Makefile - the Makefile.
+README - this file.
+
+REMARKS: The time was measured using the bash timer.
+
+
+
+ANSWERS:
+
+Assignment 1:
+Machine Specs:
+	Model name:          Intel(R) Core(TM) i5-4570 CPU @ 3.20GHz
+	CPU(s):              4
+	Architecture:        x86_64
+Analysis of results:
+    We noticed that running a high amount of threads leads to better times. However, the return on increasing the thread amount diminishes drastically as the amount approaches 50 threads. With more than 50 threads increasing the amount of threads did not improve results. The runtime converges to 15.8 seconds.
+
+Theoretical Questions:
+## Question 1
+	Due to the fact that there is no memory access, the optimal number of kernel level threads for the function foo will the number of the cores. Adding more threads reduces the frequency of the cpu leading to lower utilization.
+
+## Question 2
+a.	2*n lines will be printed.
+b.	n! squared, since the order of the first n prints is non deterministic, as is the order of the second n threads. However, we know that the children of threads reach the print before the parent threads reach the print. This due to the fact that the children threads don't have to wait for the barrier in order to print, while the parents do.
+
+
